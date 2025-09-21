@@ -51,7 +51,7 @@ def load_data():
         try:
             data = pd.read_csv("agriculture-and-rural-development_lbn.csv")
         except FileNotFoundError:
-            data_path = r"C:\Users\user\OneDrive - American University of Beirut\MSBA - OSB\Data Visualization\Assignments\Week 3\Raw data\agriculture-and-rural-development_lbn.csv"
+            data_path = r"agriculture-and-rural-development_lbn.csv"
             data = pd.read_csv(data_path)
     except FileNotFoundError:
         st.error("⚠️ CSV file not found. Using sample data for demonstration.")
@@ -563,4 +563,5 @@ if not filtered_data.empty:
 
 # Footer
 st.markdown("---")
+
 st.markdown("🌱 **Lebanon Agricultural Development Analytics** | Enhanced Interactive Dashboard | Built with Streamlit & Matplotlib")
